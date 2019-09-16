@@ -1,20 +1,35 @@
+
+#third party
 import pytest
 
-from apollo import Auth
-from tests.data.auth_data import TEST_AUTH_SCENARIOS
+#local
+from apollo.auth.base import AuthBase
 
-@pytest.mark.parametrize('case',TEST_AUTH_SCENARIOS)
+
+
+class MockAPIAuth(AuthBase):
+    """My custom API"""
+
+    def __init__(
+        self,
+        api_key
+    ):
+        self._api_key = api_key
+
+    @property
+    def param(self):
+        return {
+            'my_api_key': self._api_key
+        }
+
 @pytest.mark.auth
-def test_auth(case):
+def test_auth():
 
-    a = Auth(
-        case.api,
-        case.request_headers,
-        case.request_auth,
-        *case.auth,
-        **case.params
+    api_auth = MockAPIAuth(
+        api_key = '123'
     )
 
-    assert case.header_response == a.headers
-    assert case.param_response == a.params
-    assert case.auth_response == a.auth
+    assert api_auth.param ==  {'my_api_key': '123'}
+    assert isinstance(api_auth.auth, tuple)
+    assert isinstance(api_auth.header, dict)
+    assert isinstance(api_auth, AuthBase)
