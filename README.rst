@@ -1,7 +1,7 @@
 ApolloCB
 ========
 
-There is a lot of boilerplate code in making API requests and storing responses. Authentication, intercepting responses before storage, 
+Making API requests and storing responses usually requires a lot of boilerplate code. Authentication, intercepting responses before storage, 
 issues with threading on different machines and many more challenges and frustrations -- resulting in thousands of lines of 
 unnecessary code -- are common when building custom clients.
 
@@ -34,10 +34,10 @@ Windows
 
 API Authentication
 ~~~~~~~~~~~~~~~~~~
-Use the :class:`~apollo.auth.base.AuthBase` class to create custom API authentication.
+Use the AuthBase class to create custom API authentication.
 
-:func:`~apollo.auth.base.AuthBase.param`, :func:`~apollo.auth.base.AuthBase.header` or :func:`~apollo.auth.base.AuthBase.auth`
-can be used for authentication. Below we're implementing :func:`~apollo.auth.base.AuthBase.param`.
+param, header or auth
+can be used for authentication. Below we're implementing param.
 
 .. code-block:: python
 
@@ -72,14 +72,14 @@ we need to generate a list of urls and / or parameters and / or auth to make uni
 We can use a simple zipping technique to make these multiple requests but this creates a lot
 of extra, unnecessary code. 
 
-:class:`~apollo.ApolloCB` 
+ApolloCB 
 implements a wrapper to generate lists of urls, params, headers, data, 
 cookies, etc. which are then zipped and requests made. 
-These wrappers can be found in the :ref:`attributes` module.
+These wrappers can be found in the attributes module.
 
-The below example uses :func:`~apollo.request.attributes.Url` (which implements 
+The below example uses Url (which implements 
 the `str format method <https://docs.python.org/2/library/functions.html#format>`_ 
-to generate a list of urls) and :func:`~apollo.request.attributes.Param` attributes. 
+to generate a list of urls) and Param attributes. 
 
 URL
 
@@ -123,7 +123,7 @@ Param
     {'b': '19', 'param_a': 'a'}
 
 Note: If uneven lists are given, the last value of the shorter list will be
-repeated (see :func:`~apollo.utils.helpers.zip_longest_ffill`). To modify 
+repeated (see zip_longest_ffill). To modify 
 this functionality, use the zip_type argument.
 
 .. _basic_rate_limiting:
@@ -131,9 +131,9 @@ this functionality, use the zip_type argument.
 Rate Limiting
 ~~~~~~~~~~~~~
 
-:class:`~apollo.ApolloCB` runs asynchronously and can easily cause a 
+ApolloCB runs asynchronously and can easily cause a 
 `DDOS attack <https://en.wikipedia.org/wiki/Denial-of-service_attack>`_ for vulnerable
-websites. To avoid this, the :class:`~apollo.utils.RateLimit` class protects endpoints and storage from
+websites. To avoid this, the RateLimit class protects endpoints and storage from
 being overwhelmed. The below example shows the API rate limit will be 5 requests 
 every 5 seconds and storage one request every second. The default RateLimit is a rate of 5
 every 5 seconds.
@@ -151,8 +151,8 @@ every 5 seconds.
 Executing Requests
 ------------------
 
-Once :ref:`attributes` and :ref:`auth_usage` are complete, it's time
-to make the request using :class:`~apollo.ApolloCB`.
+Once attributes and authentication are complete, it's time
+to make the request using ApolloCB.
 
 
 ApolloCB uses the above values to make requests::

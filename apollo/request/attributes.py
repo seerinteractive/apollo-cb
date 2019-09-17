@@ -232,21 +232,3 @@ class Data(DictConverter):
         return (
             f"{self.__class__.__name__}(static={self.static}, dynamic={self.dynamic})"
         )
-
-
-
-    # def __init__(self, username=None, password=None):
-
-    #     self._username = username
-    #     self._password = password
-
-    # @property
-    # def username(self):
-    #     return self._username
-
-    # @property
-    # def password(self):
-    #     return self._password
-
-    # def __repr__(self):
-    #     return f"{self.__class__.__name__}(username={self.username})"

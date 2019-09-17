@@ -47,7 +47,6 @@ class RequestFactory(UserList):
     mod_response = attr.ib(default = lambda x: x, validator = instance_of(types.FunctionType))
     storage = attr.ib(default = None, validator = instance_of((StorageBase, type(None))))
     verbose = attr.ib(default = False, validator = instance_of(bool))
-    # content_type = attr.ib(default = 'json', validator = in_(HttpAcceptedTypes.ACCEPTED_CONTENT_TYPES))
 
     @property
     def data(self):

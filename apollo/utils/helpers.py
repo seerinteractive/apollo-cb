@@ -170,36 +170,3 @@ class HttpAcceptedTypes:
         'json' : 'application/json',
         'xml': 'application/xml'
     }
-
-    # def __init__(self, rate=5, limit=5):
-    #     self._rate = rate
-    #     self._limit = limit
-
-    # @property
-    # def rate(self,):
-    #     """The speed with which ApolloCB executes requests (in seconds).
-
-    #     :raises: ``ValueError`` if not an ``int``.
-
-    #     """
-    #     if not isinstance(self._rate, int):
-    #         raise ValueError("rate must be an int")
-    #     return self._rate
-
-    # @property
-    # def limit(self,):
-    #     """The number of requests to be executed at one time.
-
-    #     :raises: ``ValueError`` if not an ``int``.
-
-    #     """
-    #     if not isinstance(self._limit, int):
-    #         raise ValueError("limit must be an int")
-    #     return self._limit
-
-
-    # def __init__(self, path):
-    #     self._path = path
-
-    # def __str__(self,):
-    #     return f"FilePath(path='{self._path}')"
