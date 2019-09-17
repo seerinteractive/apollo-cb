@@ -10,7 +10,7 @@ method.
 
 Example:
 
-.. code-block::
+.. code-block:: python
 
     from apollo.storage.base import StorageBase
 
