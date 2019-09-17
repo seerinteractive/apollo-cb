@@ -67,7 +67,7 @@ class FilePattern:
 
     Example usage:
 
-    .. code-block::
+    .. code-block:: python
 
         from apollo.utils import FilePattern
 
@@ -138,7 +138,7 @@ def zip_longest_ffill(*args):
 
     Example usage:
 
-    .. code-block::
+    .. code-block:: python
 
         zip_longest_ffill(*[[1,2],[1,2,3]])
         >>>[(1, 1), (2, 2), (2, 3)]

@@ -28,7 +28,7 @@ class Param(DictConverter):
 
     Example Usage:
 
-    .. code-block:: 
+    .. code-block:: python
 
         Param(
             static = {'param_a': 'a'},
@@ -56,7 +56,7 @@ class Url(UserList):
 
     Example Usage:
 
-    .. code-block:: 
+    .. code-block:: python 
 
         Url(
             path_format = "http://httpbin.org/{a}/{b}/{c}", 
@@ -116,7 +116,7 @@ class Cookie(DictConverter):
 
     Example Usage:
 
-    .. code-block:: 
+    .. code-block:: python 
 
         Cookie(
             static = {'cookie': 'a'},
@@ -145,7 +145,7 @@ class Header(DictConverter):
 
     Example Usage:
 
-    .. code-block:: 
+    .. code-block:: python 
 
         Header(
             static = {'header': 'a'},
@@ -175,7 +175,7 @@ class Auth(UserList):
 
     Example Usage:
 
-    .. code-block:: 
+    .. code-block:: python 
 
         Auth(
             username=[1,2], 
@@ -218,7 +218,7 @@ class Data(DictConverter):
 
     Example Usage:
 
-    .. code-block:: 
+    .. code-block:: python 
 
         Data(
             static = {'data': 'a'},

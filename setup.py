@@ -14,7 +14,7 @@ setup(
         'google-cloud-storage>=1.19.0',
         'google-api-python-client>=1.7.11'
         'aiohttp>=3.5.4',
-        'async-timeout>=3.0.1'
+        'async-timeout>=3.0.1',
     ],
     license="MIT",
     classifiers=[

@@ -27,7 +27,7 @@ Use the :class:`~apollo.auth.base.AuthBase` class to create custom API authentic
 :func:`~apollo.auth.base.AuthBase.param`, :func:`~apollo.auth.base.AuthBase.header` or :func:`~apollo.auth.base.AuthBase.auth`
 can be used for authentication. Below we're implementing :func:`~apollo.auth.base.AuthBase.param`.
 
-.. code-block::
+.. code-block:: python
 
     from apollo.auth.base import AuthBase
 
@@ -122,7 +122,7 @@ being overwhelmed. The below example shows the API rate limit will be 5 requests
 every 5 seconds and storage one request every second. The default RateLimit is a rate of 5
 every 5 seconds.
 
-.. code-block::
+.. code-block:: python
 
     from apollo.utils import RateLimit
 

@@ -56,7 +56,7 @@ class ApolloCB:
     Below we implemented RateLimiting, Storage, FilePattern, 
     Request Attributes and Authorization.
     
-    .. code-block::
+    .. code-block:: python
 
         #local
         from apollo.builder.client import ApolloCB

@@ -24,7 +24,7 @@ rate limiting and storage to make API requests asynchronously and store results.
 Mac/Linux
 ~~~~~~~~~
 
-.. code-block:: 
+.. code-block:: python 
 
     pip install virtualenv
     virtualenv <your-env>
@@ -34,7 +34,7 @@ Mac/Linux
 Windows
 ~~~~~~~
 
-.. code-block:: 
+.. code-block:: python 
 
     pip install virtualenv
     virtualenv <your-env>

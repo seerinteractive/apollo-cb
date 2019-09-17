@@ -8,7 +8,7 @@ class AuthBase(RequestABC):
 
     Example Usage:
 
-    .. code-block::
+    .. code-block:: python
 
         from apollo.auth.base import AuthBase
 

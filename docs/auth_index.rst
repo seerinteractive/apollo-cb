@@ -14,7 +14,7 @@ Custom API
 
 Use the :class:`~apollo.auth.base.AuthBase` class.
 
-.. code-block::
+.. code-block:: python
 
     from apollo.auth.base import AuthBase
 
@@ -42,7 +42,7 @@ Prebuilt API
 
 Use :ref:`prebuilt`.
 
-.. code-block::
+.. code-block:: python
 
   from apollo.auth import Pipedrive
 
